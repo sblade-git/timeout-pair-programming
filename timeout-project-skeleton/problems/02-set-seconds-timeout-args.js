@@ -6,23 +6,20 @@ will be passed to the callback.
 Write a function `setSecondsTimeoutArgs` that accepts a callback, a delay
 in seconds, and any number of additional arguments. The function should call the
 callback with the additional arguments after the specified delay.
+***********************************************************************/
 
-In addition to Mocha, we recommend that you test your code manually using node
-with the examples below.
-
-Examples:
+let setSecondsTimeoutArgs = function(cb, delay, ...args){
+  setTimeout(cb, delay * 1000, ...args);
+}
 
 function printSum(num1, num2, num3) {
-    console.log(num1 + num2 + num3);
+  console.log(num1 + num2 + num3);
 }
 setSecondsTimeoutArgs(printSum, 0.25, 5, 1, 4); // should print '10' after 250ms
 
 setSecondsTimeoutArgs(function(arg1, arg2) {
-    console.log(arg1 + '-' + arg2);
+  console.log(arg1 + '-' + arg2);
 }, 0.7, 'hello', 'world'); // should print 'hello-world' after 700ms
-***********************************************************************/
-
-
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
