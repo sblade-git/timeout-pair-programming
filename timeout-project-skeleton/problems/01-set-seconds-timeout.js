@@ -9,7 +9,8 @@ the specified amount of time. Feel free to use the built-in `setTimeout`
 in your implementation.
 ***********************************************************************/
 let setSecondsTimeout = function(cb, delay){
-  return setTimeout(cb, delay * 1000)
+  let timeOut = setTimeout(cb, delay * 1000)
+  console.log(timeOut);
 }
 
 setSecondsTimeout(function () {
